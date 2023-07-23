@@ -1,10 +1,6 @@
 import { Router, Request, Response, NextFunction } from 'express';
 
-import { userRouter } from '@modules/User/routes/user.routes';
-
 const router = Router();
-
-router.use('/user', userRouter);
 
 router.get('/', (request: Request, response: Response) =>
   response.send('Carbon Free - 0.0.1'),

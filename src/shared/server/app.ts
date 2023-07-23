@@ -7,7 +7,6 @@ import cors from 'cors';
 import { LoggerStream } from '@config/winston';
 import '../container';
 
-import { uploadConfig } from '@config/upload';
 import { globalErrorHandler } from '../middleware/globalErrorHandler';
 import { router } from './routes';
 
@@ -34,8 +33,6 @@ app.use(
 );
 
 app.use(json());
-
-app.use('/files', express.static(uploadConfig.uploadsFolder));
 
 app.use(router);
 
