@@ -62,3 +62,7 @@ npm run start
 ```
 
 Por padrão, o servidor vai ser iniciado na porta `3333`, porém pode ser alterado com a variável de ambiente `PORT`
+
+## 🕹 Interagindo com a API
+
+Todos os endpoints e parâmetros estão contidos [nesta documentação](https://documenter.getpostman.com/view/25299399/2s946maVGT). No ambiente _Development_ está a porta e endereço padrão configurado no `.env`.
