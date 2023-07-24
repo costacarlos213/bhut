@@ -34,7 +34,7 @@ app.use(
 
 app.use(json());
 
-app.use(router);
+app.use('/api', router);
 
 app.use(globalErrorHandler);
 
