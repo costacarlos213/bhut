@@ -12,6 +12,10 @@ class LogRepository implements ILogRepository {
 
     return document;
   }
+
+  index(): Promise<ILog[]> {
+    return Log.find().sort({ data_hora: -1 }).exec();
+  }
 }
 
 export { LogRepository };

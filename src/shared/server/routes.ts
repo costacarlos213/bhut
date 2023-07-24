@@ -1,4 +1,5 @@
 import { carRouter } from '@modules/Car/routes/car.routes';
+import { logRouter } from '@modules/Log/routes/log.routes';
 import { Router, Request, Response, NextFunction } from 'express';
 
 const router = Router();
@@ -8,6 +9,7 @@ router.get('/', (request: Request, response: Response) =>
 );
 
 router.use('/cars', carRouter);
+router.use('/logs', logRouter);
 
 router.use((request: Request, response: Response, next: NextFunction) => {
   if (!request.route) {
