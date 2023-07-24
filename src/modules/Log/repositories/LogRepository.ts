@@ -1,4 +1,4 @@
-import { ILog } from '../entities/ILog';
+import { ILog } from '../entities/Log.interface';
 import { Log } from '../entities/Log';
 import { ILogRepository } from './LogRepository.interface';
 import { ICreateLogDTO } from './dto/CreateLogDTO';

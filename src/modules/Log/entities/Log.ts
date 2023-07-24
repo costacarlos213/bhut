@@ -1,9 +1,7 @@
-import { ObjectId } from 'mongodb';
 import mongoose from 'mongoose';
-import { ILog } from './ILog';
+import { ILog } from './Log.interface';
 
 const logSchema = new mongoose.Schema<ILog>({
-  _id: ObjectId,
   data_hora: {
     type: Date,
     default: Date.now,
