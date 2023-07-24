@@ -7,4 +7,6 @@ const carController = new CarController();
 
 carRouter.post('/', createCarMiddleware, carController.create);
 
+carRouter.get('/', carController.index);
+
 export { carRouter };

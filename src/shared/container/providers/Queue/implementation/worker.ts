@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { Job, Worker } from 'bullmq';
 import { redis } from '@config/redis';
 import axios, { isAxiosError } from 'axios';
@@ -23,17 +24,16 @@ export const worker = new Worker<IQueue>(
       });
     } catch (error) {
       if (!isAxiosError(error)) {
-        // eslint-disable-next-line no-console
         console.log(error);
       }
     }
   },
   {
     connection: redis,
+    concurrency: 10,
   },
 );
 
 worker.on('failed', (job, err) =>
-  // eslint-disable-next-line no-console
   console.log(`Failed job ${job?.id} with ${err}`),
 );

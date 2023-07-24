@@ -9,6 +9,9 @@ class QueueProvider implements IQueueProvider {
   constructor() {
     this.queue = new Queue<IQueue>('webhook-queue', {
       connection: redis,
+      defaultJobOptions: {
+        removeOnComplete: true,
+      },
     });
   }
 
