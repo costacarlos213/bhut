@@ -5,8 +5,8 @@ import { createCarMiddleware } from './validators/car.validation';
 const carRouter = Router();
 const carController = new CarController();
 
-carRouter.post('/', createCarMiddleware, carController.create);
+carRouter.post('/createCar', createCarMiddleware, carController.create);
 
-carRouter.get('/', carController.index);
+carRouter.get('/listCars', carController.index);
 
 export { carRouter };

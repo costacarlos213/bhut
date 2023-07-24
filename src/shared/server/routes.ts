@@ -8,7 +8,7 @@ router.get('/', (request: Request, response: Response) =>
   response.send('Teste BHUT - 0.0.1'),
 );
 
-router.use('/cars', carRouter);
+router.use('/', carRouter);
 router.use('/logs', logRouter);
 
 router.use((request: Request, response: Response, next: NextFunction) => {
